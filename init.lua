@@ -291,6 +291,34 @@ require('lazy').setup({
     config = function()
       require('dashboard').setup {
         -- config
+        config = {
+          header = {
+            [[                                                                       ]],
+            [[                                                                     ]],
+            [[       ████ ██████           █████      ██                     ]],
+            [[      ███████████             █████                             ]],
+            [[      █████████ ███████████████████ ███   ███████████   ]],
+            [[     █████████  ███    █████████████ █████ ██████████████   ]],
+            [[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+            [[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+            [[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+            [[                                                                       ]],
+          },
+          center = {
+            {
+              icon = '',
+              icon_hl = 'group',
+              desc = 'description test',
+              desc_hl = 'group',
+              key = 'shortcut key in dashboard buffer not keymap !!',
+              key_hl = 'group',
+              key_format = ' [%s]', -- `%s` will be substituted with value of `key`
+              action = '',
+            },
+          },
+          footer = {},
+          vertical_center = false, -- Center the Dashboard on the vertical (from top to bottom)
+        },
       }
     end,
     dependencies = { { 'nvim-tree/nvim-web-devicons' } },
@@ -898,6 +926,7 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('everforest').setup {
+        transparent = true,
         styles = {
           comments = { italic = true }, -- Disable italics in comments
         },
