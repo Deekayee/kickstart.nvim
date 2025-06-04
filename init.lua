@@ -284,6 +284,18 @@ require('lazy').setup({
     },
   },
 
+  -- Added dashboard
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        -- config
+      }
+    end,
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -886,6 +898,7 @@ require('lazy').setup({
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('everforest').setup {
+        transparent = true,
         styles = {
           comments = { italic = true }, -- Disable italics in comments
         },
